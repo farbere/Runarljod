@@ -141,14 +141,12 @@ class testAttentionModel(tf.keras.Model):
                                                     training=training)
         c_out = tf.keras.layers.SpatialDropout2D(self.spatial_dropout_prob)(self.conv_1a(c_out),
                                                                             training=training)
-        
-        c_out = self.batch1(c_out)
+
         
         c_out = tf.keras.layers.MaxPool2D(strides=(2,2))(self.conv_1b(c_out)) # to 32x32xch
         c_out = tf.keras.layers.SpatialDropout2D(self.spatial_dropout_prob)(self.conv_2a(c_out),
                                                                             training=training)
-        
-        c_out = self.batch1(c_out)
+
         
         c_out = tf.keras.layers.MaxPool2D(strides=(2,2))(self.conv_2b(c_out))
         c_out = tf.keras.layers.SpatialDropout2D(self.spatial_dropout_prob) (self.conv_3a(c_out),
