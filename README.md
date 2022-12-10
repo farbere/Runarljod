@@ -5,7 +5,6 @@ Project aims:
 2. Finger Spelling Recognition in Real-Time: given a video of a ASL fingerspelling of a word, decode it.
 
 ## Directory Structure
-    * ISIM: Initial Still Image Models, playground for simple models of static images
     * PreProcessing: notebooks for pre-processing of the data
     * Playground: testing folder, for testing out ideas
     * Production: modules used for the final training/validation of the model
